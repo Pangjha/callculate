@@ -4,6 +4,12 @@
 /*div{
   background-image: url(../asset/vintage.jpg);
 }*/
+h1{
+  color: #8c7e7e;
+   background-image: url(../asset/vintage.jpg);
+    padding:15px;
+    text-align:center;
+}
 #calc-contain{
     position: relative;
     width: 400px;
@@ -55,6 +61,7 @@
   }
   
   input[type = text] {
+    text-align: right;
     position: relative;
     display: block;
     width: 90%;
@@ -80,16 +87,18 @@
 }
 .main {
   float:left;
-  width:60%;
+  width:100%;
   padding:0 20px;
-  background-image: url(../asset/ironman.gif);
+  background-image: url(../asset/heart.gif);
   background-position: center;
+  
   /*background-size: 100%;*/
  
 }
 .bodyHead{
   background-image: url(../asset/vintage.jpg);
 }
+
 .right {
   color: #463d3de0;
   

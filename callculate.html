@@ -9,10 +9,68 @@
 	      href="https://fonts.googleapis.com/css?family=Montserrat">
 </head>
 <body  style="font-family:Verdana;color:#aaaaaa;">
+  <audio id="res">
+    <source src="asset/sound0-9/res.ogg" type="audio/ogg">
+    <source src="asset/sound0-9/res.mp3" type="audio/mpeg">
+    
+  </audio>
+  <audio id="del">
+      <source src="asset/sound0-9/del.ogg" type="audio/ogg">
+      <source src="asset/sound0-9/del.mp3" type="audio/mpeg">
+      
+    </audio>
+<audio id="s0">
+  <source src="asset/sound0-9/0.ogg" type="audio/ogg">
+  <source src="asset/sound0-9/0.mp3" type="audio/mpeg">
+  
+</audio>
+<audio id="s1">
+  <source src="asset/sound0-9/1.ogg" type="audio/ogg">
+  <source src="asset/sound0-9/1.mp3" type="audio/mpeg">
+  
+</audio>
+<audio id="s2">
+  <source src="asset/sound0-9/2.ogg" type="audio/ogg">
+  <source src="asset/sound0-9/2.mp3" type="audio/mpeg">
+  
+</audio>
+<audio id="s3">
+  <source src="asset/sound0-9/3.ogg" type="audio/ogg">
+  <source src="asset/sound0-9/3.mp3" type="audio/mpeg">
+  
+</audio>
+<audio id="s4">
+  <source src="asset/sound0-9/4.ogg" type="audio/ogg">
+  <source src="asset/sound0-9/4.mp3" type="audio/mpeg">
+  
+</audio>
+<audio id="s6">
+  <source src="asset/sound0-9/6.ogg" type="audio/ogg">
+  <source src="asset/sound0-9/6.mp3" type="audio/mpeg">
+  
+</audio>
+<audio id="s7">
+  <source src="asset/sound0-9/7.ogg" type="audio/ogg">
+  <source src="asset/sound0-9/7.mp3" type="audio/mpeg">
+  
+</audio>
+<audio id="s8">
+  <source src="asset/sound0-9/8.ogg" type="audio/ogg">
+  <source src="asset/sound0-9/8.mp3" type="audio/mpeg">
+  
+</audio>
+<audio id="s9">
+  <source src="asset/sound0-9/9.ogg" type="audio/ogg">
+  <source src="asset/sound0-9/9.mp3" type="audio/mpeg">
+  
+</audio>
+<audio id="s5">
+  <source src="asset/sound0-9/5.ogg" type="audio/ogg">
+  <source src="asset/sound0-9/5.mp3" type="audio/mpeg">
+  
+</audio>
+  <h1>Cutie Callculator</h1>
 
-<div style="background-color:#e5e5e5;padding:15px;text-align:center;">
-  <h1>Hello World</h1>
-</div>
 
 <div style="overflow:auto">
   <!-- <div class="menu">
@@ -23,7 +81,7 @@
   </div> -->
 
   <div class="main" href="./style.css">
-    <h2>Lorum Ipsum</h2>
+    <h2>Design by Pangjha</h2>
     <div id='calc-contain'>
   
         <form name="calculator">
@@ -31,27 +89,27 @@
           <input type="text" name="answer" />
           <br>
           
-          <input type="button" value=" 1 " onclick="calculator.answer.value += '1'" />
-          <input type="button" value=" 2 " onclick="calculator.answer.value += '2'" />
-          <input type="button" value=" 3 " onclick="calculator.answer.value += '3'" />
+          <input type="button" value=" 1 " onclick="calculator.answer.value += '1',playAudio1();" />
+          <input type="button" value=" 2 " onclick="calculator.answer.value += '2',playAudio2();" />
+          <input type="button" value=" 3 " onclick="calculator.answer.value += '3',playAudio3();" />
           <input type="button" value=" + " onclick="calculator.answer.value += '+'" />
           <br/>
           
-          <input type="button" value=" 4 " onclick="calculator.answer.value += '4'" />
-          <input type="button" value=" 5 " onclick="calculator.answer.value += '5'" />
-          <input type="button" value=" 6 " onclick="calculator.answer.value += '6'" />
+          <input type="button" value=" 4 " onclick="calculator.answer.value += '4',playAudio4();" />
+          <input type="button" value=" 5 " onclick="calculator.answer.value += '5',playAudio5();" />
+          <input type="button" value=" 6 " onclick="calculator.answer.value += '6',playAudio6();" />
           <input type="button" value=" - " onclick="calculator.answer.value += '-'" />
           </br>
         
-          <input type="button" value=" 7 " onclick="calculator.answer.value += '7'" />
-          <input type="button" value=" 8 " onclick="calculator.answer.value += '8'" />
-          <input type="button" value=" 9 " onclick="calculator.answer.value += '9'" />
+          <input type="button" value=" 7 " onclick="calculator.answer.value += '7',playAudio7();" />
+          <input type="button" value=" 8 " onclick="calculator.answer.value += '8',playAudio8();" />
+          <input type="button" value=" 9 " onclick="calculator.answer.value += '9',playAudio9();" />
           <input type="button" value=" x " onclick="calculator.answer.value += '*'" />
           </br>
       
-          <input type="button" value=" c " onclick="calculator.answer.value = ''" />
-          <input type="button" value=" 0 " onclick="calculator.answer.value += '0'" />
-          <input type="button" value=" = " onclick="calculator.answer.value = eval(calculator.answer.value)" />
+          <input type="button" value=" c " onclick="calculator.answer.value = '',del();" />
+          <input type="button" value=" 0 " onclick="calculator.answer.value += '0',playAudio0();"  />
+          <input type="button" value=" = " onclick="calculator.answer.value = eval(calculator.answer.value),playres();" />
           <input type="button" value=" / " onclick="calculator.answer.value += '/'" />
           </br>
 
@@ -63,13 +121,74 @@
       </div>
   </div>
 
-  <div class="right">
-    <h2>About</h2>
-    <p>This callculator is coding and design by PangJha.</p>
-  </div>
-</div>
+  <script>
+      var delet = document.getElementById("del"); 
+    
+    function del() { 
+       delet.play(); 
+    } 
+    var re0 = document.getElementById("res"); 
+    
+    function playres() { 
+        re0.play(); 
+    } 
+    var x0 = document.getElementById("s0"); 
+    
+    function playAudio0() { 
+        x0.play(); 
+    } 
+    var x1 = document.getElementById("s1"); 
+    
+    function playAudio1() { 
+        x1.play(); 
+    } 
 
-<div style="background-color:#e5e5e5;text-align:center;padding:10px;margin-top:7px;">© copyright w3schools.com</div>
+  var x2 = document.getElementById("s2"); 
+    
+    function playAudio2() { 
+        x2.play(); 
+    } 
+
+  var x3 = document.getElementById("s3"); 
+    
+    function playAudio3() { 
+        x3.play(); 
+    } 
+    var x4 = document.getElementById("s4"); 
+    
+    function playAudio4() { 
+        x4.play(); 
+    } 
+    var x5 = document.getElementById("s5"); 
+    
+    function playAudio5() { 
+        x5.play(); 
+    } 
+    var x6 = document.getElementById("s6"); 
+    
+    function playAudio6() { 
+        x6.play(); 
+    } 
+    var x7 = document.getElementById("s7"); 
+    
+    function playAudio7() { 
+        x7.play(); 
+    } 
+    var x8 = document.getElementById("s8"); 
+    
+    function playAudio8() { 
+        x8.play(); 
+    } 
+    var x9= document.getElementById("s9"); 
+    
+    function playAudio9() { 
+        x9.play(); 
+    } 
+
+   
+    </script>
+
+
 
 </body>
 </html>
